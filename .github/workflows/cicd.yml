@@ -43,7 +43,7 @@ jobs:
           docker-compose up --build -d
           docker-compose exec -T backend npm test
           docker-compose exec -T frontend npm test
-
+          docker-compose down 
   # Step 2: Automatically Merge dev into main
   merge-dev-to-main:
     needs: build-and-test-on-dev
